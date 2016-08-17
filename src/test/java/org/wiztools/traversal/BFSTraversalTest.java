@@ -47,11 +47,11 @@ public class BFSTraversalTest {
         Node root = new Node('a');
         Node l1Left = new Node('b');
         Node l1Right = new Node('c');
-        root.leafs = new Node[]{l1Left, l1Right};
+        root.children = new Node[]{l1Left, l1Right};
         
         Node l2Left = new Node('d');
         Node l2Right = new Node('e');
-        l1Left.leafs = new Node[]{l2Left, l2Right};
+        l1Left.children = new Node[]{l2Left, l2Right};
         
         BFSTraversal instance = new BFSTraversal();
         instance.traverse(root);

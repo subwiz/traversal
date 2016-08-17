@@ -6,7 +6,7 @@ package org.wiztools.traversal;
  */
 public class Node {
     public final char data;
-    public Node[] leafs;
+    public Node[] children;
     
     public Node(char data) {
         this.data = data;

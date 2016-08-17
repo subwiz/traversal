@@ -19,10 +19,10 @@ public class BFSTraversal extends AbstractVisitor {
         visit(root);
         while(q.isNotEmpty()) {
             Node curr = q.dequeue();
-            if(curr.leafs != null) {
-                for(Node leaf: curr.leafs) {
-                    q.enqueue(leaf);
-                    visit(leaf);
+            if(curr.children != null) {
+                for(Node child: curr.children) {
+                    q.enqueue(child);
+                    visit(child);
                 }
             }
         }
