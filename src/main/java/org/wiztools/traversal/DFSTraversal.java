@@ -16,7 +16,7 @@ public class DFSTraversal extends AbstractVisitor {
             return;
         }
         stack.push(root);
-        // visit(root);
+        
         while(!stack.isEmpty()) {
             Node curr = stack.pop();
             visit(curr);
