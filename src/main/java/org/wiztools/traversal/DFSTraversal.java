@@ -16,13 +16,14 @@ public class DFSTraversal extends AbstractVisitor {
             return;
         }
         stack.push(root);
-        visit(root);
+        // visit(root);
         while(!stack.isEmpty()) {
             Node curr = stack.pop();
+            visit(curr);
             if(curr.children != null) {
-                for(Node child: curr.children) {
+                for(int i=curr.children.length-1; i>=0; i--) {
+                    Node child = curr.children[i];
                     stack.push(child);
-                    visit(child);
                 }
             }
         }
