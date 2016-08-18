@@ -11,9 +11,9 @@ import static org.junit.Assert.*;
  *
  * @author subhash
  */
-public class BFSTraversalTest {
+public class DFSTraversalTest {
     
-    public BFSTraversalTest() {
+    public DFSTraversalTest() {
     }
     
     @BeforeClass
@@ -33,11 +33,11 @@ public class BFSTraversalTest {
     }
 
     /**
-     * Test of traverse method, of class BFSTraversal.
+     * Test of traverse method, of class DFSTraversal.
      */
-    @org.junit.Test
+    @Test
     public void testTraverse() {
-        System.out.println("BFS traverse");
+        System.out.println("DFS traverse");
         
         Node root = new Node('a');
         Node l1Left = new Node('b');
@@ -52,7 +52,7 @@ public class BFSTraversalTest {
         Node l2Right_2 = new Node('g');
         l1Right.children = new Node[]{l2Left_2, l2Right_2};
         
-        BFSTraversal instance = new BFSTraversal();
+        DFSTraversal instance = new DFSTraversal();
         instance.traverse(root);
     }
     
